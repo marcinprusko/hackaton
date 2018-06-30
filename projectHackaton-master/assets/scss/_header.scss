@@ -1,0 +1,98 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 123px;
+    &__top {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.3;
+            width: 100%;
+            height: 1px;
+            background-color: $white;
+        }
+    }
+    &__social {
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        width: 100%;
+        left: 0;
+        right: 0;
+        justify-content: flex-end;
+        
+        &-nav {
+            display: flex;
+            padding: $padding-space 0;
+            font-family: Open-sans, "sans-serif";
+            font-size: 10px;
+            color: $white;
+            list-style: none;
+        }
+        &-links {
+            list-style: none;
+            padding-left: $padding-space;
+            text-decoration: none;
+            color: rgba($white, 0.4);
+        }
+    }
+    &__bot {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__nav-brand {
+        height: 70px;
+        font-family: Permanent Marker, "sans-serif";
+        font-size: 38px;
+        color: $white;
+        &:hover {
+            text-shadow: 2px 2px 2px $blue;
+            span {
+                color: $blue;
+                text-shadow: none;
+            }
+        }
+        span {
+            margin-top: 0;
+            font-size: 0.75rem;
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &-link {
+            font-size: $menu-font-size;
+            font-family: Poppins, "sans-serif";
+            text-decoration: none;
+            color: $white;
+            padding: $padding-space 0.5*$padding-space;
+            &--special {
+                border: 1px solid $white;
+                border-radius: 4px;
+                padding: $padding-space $padding-space;
+                margin-left: $space;
+                @include lg {
+                    margin-left: 3*$space;
+                }
+            }
+        }
+    }
+    &__nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        -webkit-padding-start: 0;
+    }
+}

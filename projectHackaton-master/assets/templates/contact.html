@@ -1,0 +1,46 @@
+{% include "inc/head.html" %}
+
+{% include "inc/header.html" %}
+
+{%include "inc/hero.html" %}
+<section class="section form">
+        <div class="container">
+            <form method="" action="" class="form__wrap" novalidate>
+                <div>
+                    <h2 class="heading-contact">
+                        Get in touch
+                    </h2>
+                    <p class="paragraph-center">
+                        If you have questions about purchasing ISV Online, you're in the right place!
+                    </p>
+                </div>
+                <label for="firstName" class="form__label">First Name</label>
+                <input type="text" class="form__input" id="firstName" placeholder="First Name" required>
+                <label for="lastName" class="form__label">Last Name</label>
+                <input type="text" class="form__input" id="lastName" placeholder="Last Name" required>
+                <label for="company" class="form__label">Company</label>
+                <input type="text" class="form__input" id="company" placeholder="Company" required>
+                <label for="email" class="form__label">Email</label>
+                <input type="email" class="form__input" id="email" placeholder="Email" required>
+                <label for="phone" class="form__label">Telephone</label>
+                <input type="tel" class="form__input" id="phone" placeholder="Telephone" required>
+                <label for="msg-box" class="form__label">Your Message</label>
+                <textarea name="message-box" class="message-box" id="msg-box" rows="6" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"></textarea>
+                <div class="verify">
+                    Prove you are human. What's 8+10 ?
+                </div>
+                <div class="btn__wrap">
+                    <button type="submit" class="btn btn__purple btn__form">SEND</button>
+                </div>
+                <p class="form__subtext">We spam as much as you do! View our <a href="#" class="form__subtext-link">Privacy Policy</a></p>
+            </form>
+        </div>
+    </section>
+
+{% include "inc/adress.html" %}
+
+{% include "inc/tweet.html" %}
+
+{% include "inc/footer.html" %}
+<div class="overlay"></div>
+{% include "inc/foot.html" %}

@@ -1,0 +1,70 @@
+.visual {
+    display: flex;
+    justify-content: center;
+    &__map {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 560px;
+        width: 100%;
+        background:url(http://via.placeholder.com/1120x560);
+      //  background-image: url(../atlas-close-up-dark-592753.jpg) no-repeat;
+        background-size: cover;
+    }
+    &__title {
+        padding-top: 89px;
+        text-align: center;
+        max-width: 50%;
+        font-size: 36px;
+        font-weight: 600;
+        font-family: Poppins, SemiBold;
+    }
+    &__text {
+        padding-top: $padding-space;
+        padding-bottom: 2*$padding-space;
+        text-align: center;
+        width: 50%;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Poppins, SemiBold;
+    } 
+    &__number{
+        font-size: 36px;
+        font-style: bold;
+        font-family: Poppins, Bold;
+
+    }
+    &__pspan{
+        position: relative;
+        font-size: 20px;
+        font-style: bold;
+        font-family: Poppins, Bold;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 50%;
+                background-color:rgba($purple, 0.2);
+            }
+    }
+    &__span{
+        position: relative;
+        padding-top: 0.25*$space;
+        &__pad {
+            padding-left: 5*$space;
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+    }
+    &
+
+    p{
+        display: inline-block;
+    }
+}

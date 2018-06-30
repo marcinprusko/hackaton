@@ -1,0 +1,23 @@
+.partners {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    &__box {
+        display: flex;
+        width: 100%;
+    }
+    &__img {
+        width: calc(100% / 8);
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+.who-work {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    grid-area: top;
+}

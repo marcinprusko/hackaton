@@ -1,0 +1,60 @@
+@import '_variables';
+
+.h{
+    margin: 0;
+    padding: $space $space;
+    font-style: Poppins, SemiBold;  
+    text-align: center;
+    color: $black;
+}
+.boxes-cont {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.box{
+    width: calc(100% - 6 * #{$padding-space});
+    overflow: hidden;
+    margin: $padding-space;
+}
+
+.img {
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+.box-header{
+    text-align: center;
+    padding-bottom: $space;
+}
+
+.box-text{
+    text-align: center;
+    padding-bottom: $space;
+}
+
+.sign{
+    display: flex;
+    justify-content: space-between;
+    color: $gray-light;
+    position: relative;
+    font-size: 0.75rem;
+    &:before {
+        content: "";
+        position: absolute;
+        top: - $padding-space;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: $gray;
+    }
+    .date {
+        padding-left: $padding-space;
+    }
+}
+
+.linia{
+    width: 100%;
+}

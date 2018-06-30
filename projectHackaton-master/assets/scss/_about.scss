@@ -1,0 +1,59 @@
+.about {
+    &__wrap  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__box {
+        background: url(http://via.placeholder.com/1376x780) no-repeat;
+        position: relative;
+        background-size: cover;
+        width: 50%;
+        height: 390px;
+        &-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient($white 50%, rgba($white, 0.7) 50%, rgba($white,0.7) 100%);
+            border: 1px solid #DADADA;
+            &:hover {
+                background: linear-gradient($purple 50%, rgba($purple, 0.7) 50%, rgba($purple,0.7) 100%);
+                color: $white;
+                h3 {
+                    color: $white;
+                }
+            }
+            h3 {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $black;
+            }
+        }
+        .feather__wrap {
+            display: block;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 64px;
+            height: 64px;
+            transform: translate(-50%, -50%);
+            background: $purple;
+            border-radius: 50% 50%;
+            border: 1px solid transparent;
+        }
+        .feather__icon-about {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            stroke: $white;
+            fill: $purple;
+            z-index: 3;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

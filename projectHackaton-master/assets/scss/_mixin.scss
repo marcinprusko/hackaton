@@ -1,0 +1,132 @@
+
+//Mixin
+%clearfix {
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin padding {
+  padding-left: $spacer;
+  padding-right: $spacer;
+}
+
+@mixin padding-sm {
+  padding-left: ($spacer-mid);
+  padding-right: ($spacer-mid);
+}
+
+@mixin padding-md {
+  padding-left: ($spacer-lg);
+  padding-right: ($spacer-lg);
+}
+
+
+@mixin xs ($level: non-root) {
+  @media screen and (min-width: $breakpoint1) {
+    @content;
+  }
+}
+
+@mixin sm ($level: non-root) {
+  @media screen and (min-width: $breakpoint2) {
+    @content;
+  }
+}
+
+@mixin md ($level: non-root) {
+  @media screen and (min-width: $breakpoint3) {
+    @content;
+  }
+}
+
+@mixin lg ($level: non-root) {
+  @media screen and (min-width: $breakpoint4) {
+    @content;
+  }
+}
+
+@mixin xl ($level: non-root) {
+  @media screen and (min-width: $breakpoint5) {
+    @content;
+  }
+}
+@mixin max-sm ($level: non-root) {
+  @media screen and (max-width: $breakpoint2) {
+    @content;
+  }
+}
+
+@mixin max-md ($level: non-root) {
+  @media screen and (max-width: $breakpoint3) {
+    @content;
+  }
+}
+
+@mixin max-lg ($level: non-root) {
+  @media screen and (max-width: $breakpoint4) {
+    @content;
+  }
+}
+
+@mixin max-xl ($level: non-root) {
+  @media screen and (max-width: $breakpoint5) {
+    @content;
+  }
+}
+
+
+@mixin placeholder-color ($color, $focus) {
+    &::-webkit-input-placeholder { 
+        color: $color;
+    }
+    &:focus{
+        &::-webkit-input-placeholder {
+            color: $focus;
+        }
+    }
+    &:-moz-placeholder {
+        color: $color;
+        opacity:  1;
+    }
+    &:focus{
+        &:-moz-placeholder {
+            color: $focus;
+            opacity:  1;
+        }
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity:  1;
+    }
+    &:focus{
+        &::-moz-placeholder { 
+            color: $focus;
+            opacity:  1;
+        }
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &:focus{
+        &:-ms-input-placeholder { 
+            color: $focus;
+        }
+    }
+}
+
+@mixin linear-gradient($begin_color, $end_color) {
+    background: $begin_color; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: -moz-linear-gradient(top,  $begin_color 0%, $end_color 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$begin_color), color-stop(100%,$end_color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $begin_color 0%,$end_color 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $begin_color 0%,$end_color 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $begin_color 0%,$end_color 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $begin_color 0%,$end_color 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$begin_color', endColorstr='$end_color',GradientType=0 ); /* IE6-8 */
+}
+
+

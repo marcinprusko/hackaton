@@ -1,0 +1,54 @@
+.tweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__img {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 255px;
+        width: 100%;
+        margin-top: 2*$space;
+        background:url(http://via.placeholder.com/1366x255);
+        background-size: cover;
+    }
+    &__wrap {
+        width: 100%;
+        position: absolute;
+        top: 2*$space;
+    }
+    &__title {
+        padding-left: 2*$space;
+        text-align: left;
+        max-width: 30%;
+        font-size: 1.25rem;
+        font-weight: 400;
+        font-family: Roboto Slab, Light;
+
+    }
+    &__text {
+        padding-left: 2*$space;
+        padding-top: $padding-space;
+        padding-bottom: 2*$padding-space;
+        text-align: left;
+        max-width:30%;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: Poppins, SemiBold;
+    }
+    .feather__tweet {
+        position: absolute;
+        margin-top: -5px;
+        left: 0;
+        top: $space;
+    }
+    &__button-wrap {
+        display: flex;
+        justify-content: center;
+    }
+    &__button {
+        margin: $space;
+    }
+}

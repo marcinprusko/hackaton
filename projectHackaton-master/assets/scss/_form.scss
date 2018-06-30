@@ -1,0 +1,84 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__wrap {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    &__input{
+        font-size: 1rem;
+        font-family: inherit;
+        color: inherit;
+        padding: $padding-space;
+        background-color: rgba($white, .5);
+        border: none;
+        border-bottom: 1px solid $gray-light;
+        width: 88%;
+        &::-webkit-input-placeholder{
+            color: $gray;
+        }
+    }
+
+    &__label {
+        margin-top: $padding-space;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: $gray-light;
+        display: block;
+        &:last-of-type {
+            margin-bottom: $padding-space;
+        }
+    }
+}
+.heading-contact {
+    font-size: $h2-font-size;
+    color: $blue-dark;
+    text-align: center;
+    margin: 0 auto;
+}
+.paragraph-center {
+    text-align: center;
+    font-size: $body-font-size;
+    padding-bottom: $space;
+    
+}
+.message-box {
+    display: block;
+    width: calc(100% - 2 * #{$space});
+    border: 1px solid $gray-light;
+    resize: none;
+    padding: $space;
+    background-color: $white-dark;
+    &::-webkit-input-placeholder{
+        color: $gray;
+    }
+}
+.verify {
+    padding-top: 2*$padding-space;
+    font-size: $body-font-size;
+    color: $gray-light;
+}
+.btn__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2*$space 0 $space 0;
+}
+
+.form__subtext {
+    text-align: center;
+    color: $gray-light;
+    &-link {
+        color: $purple;
+        text-decoration: none;
+    }
+}
+label, .error {
+    width: 100%;
+    bottom: 0.75rem;
+    color: red;
+}

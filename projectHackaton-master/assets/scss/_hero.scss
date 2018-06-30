@@ -1,0 +1,62 @@
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 670px;
+    background: url(http://via.placeholder.com/1366x670) no-repeat;
+    background-size: cover;
+    z-index: -2;
+    margin-top: -123px;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 670px;
+        background: linear-gradient(to right, $purple, rgba($purple, 0.2));
+        z-index: -1;
+    }
+    &__wrap {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(10%);
+    }
+    &__title {
+        text-align: center;
+        color: $white;
+    }
+    &__semi-title {
+        text-align: center;
+        color: $white;
+    }
+    &__input-wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        border: 1px solid rgba($white, 0.4);
+        margin-top: $space;
+    }
+    &__input  {
+        position: relative;
+        width: 60%;
+        z-index:1;
+        background: transparent;
+        padding: $padding-space $padding-space;
+        border: none;
+    }
+    &__input-btn {
+        background: none;
+        border: none;
+        color: $white;
+        padding: 0 $padding-space;
+    }
+}
